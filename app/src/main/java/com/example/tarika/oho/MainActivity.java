@@ -102,7 +102,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         idTextView =(TextView)findViewById(R.id.idTextView);
         btnLogout = (Button)findViewById(R.id.btnLogout);
 
-
         //////////////////////
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,arrayList);
@@ -140,8 +139,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 }
             }
         };
-
-
 
     }
 

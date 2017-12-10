@@ -50,8 +50,8 @@ public class LogInActivity extends AppCompatActivity implements GoogleApiClient.
 
 //////////////
     private DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-///
-private ListView database_list_view;
+
+    private ListView database_list_view;
     private ArrayList<String> arrayList = new ArrayList<>();
     private ArrayAdapter<String> adapter;
 
@@ -110,68 +110,6 @@ private ListView database_list_view;
             }
         });
 
-   /*
-        mRootRef.child("codes").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                arrayList.clear();
-                for (DataSnapshot shopSnapshot: dataSnapshot.getChildren()) {
-
-                    final String codeId = shopSnapshot.getKey().toString();
-
-                    mRootRef.child("records").child(codeId).child("Name").addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-
-                            String nametext = dataSnapshot.getValue().toString();
-                            arrayList.add("Name = " + nametext );
-                            adapter.notifyDataSetChanged();
-
-                        }
-                        @Override
-                        public void onCancelled(DatabaseError error) {
-
-                        }
-                    });
-
-                }
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-
-        mRootRef.child("records").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                //  arrayList.clear();
-                //  nametext = dataSnapshot.getValue(String.C);
-                //  arrayList.add("Name = " + nametext );
-                //  adapter.notifyDataSetChanged();
-                //  tvTest.setText(nametext);
-                for (DataSnapshot data : dataSnapshot.getChildren()) {
-                    String userName = String.valueOf(data.child("Name").getValue());
-                    arrayList.add("Name is  "+userName );
-                    adapter.notifyDataSetChanged();
-                }
-
-
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-*/
-
-        ///////////////////////////////////////////////////
 
         signInButton = (SignInButton) findViewById(R.id.login_with_google);
 
